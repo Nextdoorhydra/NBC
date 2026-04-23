@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Codekata\120803.cpp" />
-    <ClCompile Include="..\Codekata\42587.cpp" />
+    <ClCompile Include="..\Codekata\133502.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

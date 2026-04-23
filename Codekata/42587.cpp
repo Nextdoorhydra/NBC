@@ -13,7 +13,7 @@ int solution(vector<int> priorities, int location) {
     struct element {
         int index, priority;
     };
-    int i, idx = 0, answer = 1;
+    int idx = 0, answer = 1;
     element e;
     queue<element> q;
     priority_queue<int> pq;
@@ -42,15 +42,4 @@ int solution(vector<int> priorities, int location) {
     }
 
     return answer;
-}
-
-int main(void) {
-    //vector<int> input{ 2, 1, 3, 2 };
-    //int loc = 2;
-    vector<int> input{ 5,4,3,2,1 };
-    int loc = 4;
-
-    printf("%d", solution(input, loc));
-
-    return 0;
 }
