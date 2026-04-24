@@ -40,9 +40,3 @@ int solution(vector<int> ingredient) {
 
     return answer;
 }
-
-int main(void) {
-    vector<int> a = { 1, 2, 3, 1 };
-    printf("%d", solution(a));
-    return 0;
-}
