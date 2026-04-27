@@ -18,16 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Codekata\Source.cpp" />
-    <ClCompile Include="120820.cpp" />
-    <ClCompile Include="12945.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ac4d6fb7-07ee-45a7-b728-6819494204d1}</ProjectGuid>
-    <RootNamespace>CPP</RootNamespace>
+    <ProjectGuid>{657f3b91-2d34-4515-b1d2-c2bbdfd09bdf}</ProjectGuid>
+    <RootNamespace>DesignPattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -107,7 +102,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,6 +122,17 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Codekata\Player.h" />
+    <ClInclude Include="..\Codekata\Sword.h" />
+    <ClInclude Include="..\Codekata\Weapon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Codekata\Game.cpp" />
+    <ClCompile Include="..\Codekata\Player.cpp" />
+    <ClCompile Include="..\Codekata\Sword.cpp" />
+    <ClCompile Include="..\Codekata\Weapon.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
