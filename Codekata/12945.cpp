@@ -20,9 +20,3 @@ int solution1(int n) {
     answer = dp[n];
     return answer;
 }
-
-int main() {
-    int n = 100000;
-    cout << solution1(n);
-    return 0;
-}
