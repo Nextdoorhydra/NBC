@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "NBCUnreal",
+			"Path": "..\\Source\\NBCUnreal.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "NBCUnrealEditor",
+			"Path": "..\\Source\\NBCUnrealEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -5,6 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/NDH/NBC/NBCUnreal/Content/Map/MainLevel.umap",
+				"C:/NDH/NBC/NBCUnreal/Content/Map/map.umap",
+				"C:/NDH/NBC/NBCUnreal/Content/NBC/Map/MainLevel.umap",
 				"C:/Users/ndhph/Documents/Unreal Projects/Chapter2/Content/StarterContent/Architecture/Floor_400x400.uasset",
 				"C:/Users/ndhph/Documents/Unreal Projects/Chapter2/Content/Map/map.umap"
 			]
