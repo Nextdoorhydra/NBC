@@ -20,8 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Codekata\Source.cpp" />
-    <ClCompile Include="120820.cpp" />
-    <ClCompile Include="12945.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
