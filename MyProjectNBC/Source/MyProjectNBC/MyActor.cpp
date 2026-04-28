@@ -37,6 +37,11 @@ void AMyActor::BeginPlay()
     TiggerCustomEvent();
 }
 
+void AMyActor::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+}
+
 void AMyActor::TiggerCustomEvent()
 {
     // RandomMoveCount == 0 이면 종료 + 최종 결과 출력
@@ -44,6 +49,8 @@ void AMyActor::TiggerCustomEvent()
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
             FString::Printf(TEXT("MoveCount: %d, TotalDistanceMoved: %f"),
                 MoveCount, TotalDistanceMoved));
+        UE_LOG(LogTemp, Log, TEXT("MoveCount: %d, TotalDistanceMoved: %f"),
+            MoveCount, TotalDistanceMoved);
         return;
     }
 
@@ -58,6 +65,8 @@ void AMyActor::TiggerCustomEvent()
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
             FString::Printf(TEXT("(%d) Moved to: %s, Rotation: %s"),
                 MoveCount, *nextDirection.ToString(), *nextRotation.ToString()));
+        UE_LOG(LogTemp, Log, TEXT("(%d) Moved to: %s, Rotation: %s"),
+            MoveCount, *nextDirection.ToString(), *nextRotation.ToString());
     }
 
     // 1초주기 실행
