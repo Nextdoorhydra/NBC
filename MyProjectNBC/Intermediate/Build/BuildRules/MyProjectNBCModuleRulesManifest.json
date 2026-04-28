@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"C:\\NDH\\NBC\\MyProjectNBC\\Source\\MyProjectNBC\\MyProjectNBC.Build.cs",
+		"C:\\NDH\\NBC\\MyProjectNBC\\Plugins\\VisualStudioTools\\Source\\VisualStudioBlueprintDebuggerHelper\\VisualStudioBlueprintDebuggerHelper.Build.cs",
+		"C:\\NDH\\NBC\\MyProjectNBC\\Plugins\\VisualStudioTools\\Source\\VisualStudioTools\\VisualStudioTools.Build.cs",
+		"C:\\NDH\\NBC\\MyProjectNBC\\Source\\MyProjectNBC.Target.cs",
+		"C:\\NDH\\NBC\\MyProjectNBC\\Source\\MyProjectNBCEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
