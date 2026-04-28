@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ndh\\nbc\\myprojectnbc\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\myprojectnbc\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ndh\\nbc\\myprojectnbc\\intermediate\\build\\win64\\x64\\myprojectnbceditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ndh\\nbc\\myprojectnbc\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\myprojectnbc\\definitions.myprojectnbc.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
