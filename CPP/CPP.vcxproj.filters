@@ -17,5 +17,8 @@
     <ClCompile Include="..\Codekata\Source.cpp">
       <Filter>Source Files\Codekata</Filter>
     </ClCompile>
+    <ClCompile Include="76502.cpp">
+      <Filter>Source Files\Codekata</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
