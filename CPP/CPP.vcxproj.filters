@@ -14,10 +14,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Codekata\Source.cpp">
+    <ClCompile Include="..\Codekata\cpp_Lecture_assignment1.cpp">
       <Filter>Source Files\Codekata</Filter>
     </ClCompile>
-    <ClCompile Include="76502.cpp">
+    <ClCompile Include="..\Codekata\131127.cpp">
+      <Filter>Source Files\Codekata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Codekata\120806.cpp">
       <Filter>Source Files\Codekata</Filter>
     </ClCompile>
   </ItemGroup>
