@@ -1,30 +1,49 @@
 #include <iostream>
-using namespace std;
+#include <memory>
 
-class HeavyObject {
-public:
-    HeavyObject() { cout << "객체 생성됨 (무거운 작업)\n"; }
-    ~HeavyObject() { cout << "객체 소멸됨\n"; }
-    void doSomething() const { cout << "작업 수행 중...\n"; }
+struct B_Solved;
+
+struct A_Solved {
+    std::shared_ptr<B_Solved> b_ptr;
+    A_Solved() { std::cout << "A_Solved 생성\n"; }
+    ~A_Solved() { std::cout << "A_Solved 소멸\n"; }
 };
 
-// 임시 객체를 값으로 반환하는 함수
-HeavyObject createObject() {
-    return HeavyObject();
-}
+struct B_Solved {
+    // shared_ptr 대신 weak_ptr을 사용하여 순환 참조 방지
+    std::weak_ptr<A_Solved> a_ptr;
 
-int main2() {
-    cout << "[일반적인 호출]\n";
-    createObject();
-    // 반환된 임시 객체는 위 줄(statement)이 끝나는 즉시 소멸됨
-    cout << "위 줄에서 이미 소멸되었습니다.\n\n";
+    B_Solved() { std::cout << "B_Solved 생성\n"; }
+    ~B_Solved() { std::cout << "B_Solved 소멸\n"; }
 
-    cout << "[상수 레퍼런스로 수명 연장]\n";
-    const HeavyObject& ref = createObject();
-    // 임시 객체가 바로 소멸하지 않고, 'ref'의 수명이 끝날 때까지 살아남음
+    void useA() {
+        // weak_ptr 사용 전 lock()으로 객체 생존 여부 확인
+        if (std::shared_ptr<A_Solved> shared_a = a_ptr.lock()) {
+            std::cout << "A 객체 접근 성공. 현재 A 참조 카운트: " << shared_a.use_count() << "\n";
+        }
+        else {
+            std::cout << "A 객체가 이미 소멸되었습니다.\n";
+        }
+    }
+};
 
-    ref.doSomething(); // 안전하게 접근 가능
+int main() {
+    {
+        std::shared_ptr<A_Solved> a = std::make_shared<A_Solved>();
+        std::shared_ptr<B_Solved> b = std::make_shared<B_Solved>();
 
-    cout << "main 함수 종료 직전...\n";
+        a->b_ptr = b;
+        b->a_ptr = a; // weak_ptr이므로 a의 참조 카운트를 증가시키지 않음
+
+        std::cout << "연결 후 a 참조 카운트: " << a.use_count() << "\n"; // 1 유지
+
+        b->useA(); // lock() 성공
+    }
+    // 스코프 종료:
+    // 1. a가 파괴되면서 A 객체의 카운트가 0이 되어 A 객체 소멸.
+    // 2. A가 소멸되면서 내부의 b_ptr(shared_ptr)도 파괴되어 B 객체의 카운트가 0이 됨. B 객체 소멸.
+    // 정상적으로 모든 메모리가 해제됨.
+
+    std::cout << "스코프 종료됨 (정상 소멸)\n";
     return 0;
-} // 여기서 ref가 스코프를 벗어나며 임시 객체 소멸
+}

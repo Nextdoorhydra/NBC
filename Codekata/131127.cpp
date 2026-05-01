@@ -19,11 +19,6 @@ int solution(vector<string> want, vector<int> number, vector<string> discount) {
 
     // main
     for (int i = 0; i + 10 <= discount.size(); ++i) {
-
-        if (i == 3) {
-            std::cout << std::endl;
-        }
-
         vn = number;
 
         for (int j = i; j < i + 10; ++j) {
@@ -37,7 +32,6 @@ int solution(vector<string> want, vector<int> number, vector<string> discount) {
         }
 
         if (std::all_of(vn.begin(), vn.end(), [](int n) { return n == 0; })) {
-            std::cout << i << endl;
             answer++;
         }
     }
