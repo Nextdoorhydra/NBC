@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Codekata\120806.cpp" />
-    <ClCompile Include="..\Codekata\131127.cpp" />
     <ClCompile Include="..\Codekata\cpp_Lecture_assignment1.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
