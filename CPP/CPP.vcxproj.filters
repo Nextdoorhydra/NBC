@@ -17,5 +17,8 @@
     <ClCompile Include="..\Codekata\cpp_Lecture_assignment1.cpp">
       <Filter>Source Files\Codekata</Filter>
     </ClCompile>
+    <ClCompile Include="..\Codekata\84512.cpp">
+      <Filter>Source Files\Codekata</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

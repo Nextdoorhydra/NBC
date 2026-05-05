@@ -1,2 +1,3 @@
-﻿  cpp_Lecture_assignment1.cpp
+﻿  84512.cpp
+C:\NDH\NBC\Codekata\84512.cpp(70): warning C4715: 'solution': not all control paths return a value
   CPP.vcxproj -> C:\NDH\NBC\CPP\x64\Debug\CPP.exe
