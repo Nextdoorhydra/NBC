@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Codekata\120817.cpp" />
-    <ClCompile Include="..\Codekata\cpp_Lecture_assignment1.cpp" />
+    <ClCompile Include="..\Codekata\42883.cpp" />
+    <ClCompile Include="cppPractice.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
