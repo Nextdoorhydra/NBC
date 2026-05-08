@@ -4,6 +4,5 @@
 using namespace std;
 
 string solution(int num) {
-    string answer = "";
-    return answer;
+    return num % 2 == 0 ? "Even" : "Odd";
 }

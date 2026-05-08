@@ -22,7 +22,7 @@ public:
 
         for (int i = 1; i < prices.size(); i++) {
             for (int j = i - 1; j >= 0; j--) {
-                // 판매
+                // ???
                 int profit = eval(prices[i], prices[j]);
 
                 if (profit != 0) {
@@ -30,10 +30,10 @@ public:
                 }
 
             }
-            // 쉬었음
+            // ??????
             cooldown[i] = sell[i - 1];
 
-            // 구매
+            // ????
             buy[i] = max(cooldown[i - 1], buy[i - 1]);
         }
 
