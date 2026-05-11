@@ -44,7 +44,7 @@ void AMyActor::Tick(float DeltaTime)
 
 void AMyActor::TiggerCustomEvent()
 {
-    // RandomMoveCount == 0 ÀÌ¸é Á¾·á + ÃÖÁ¾ °á°ú Ãâ·Â
+    // RandomMoveCount == 0 ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½d
     if (RandomMoveCount <= 0) {
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
             FString::Printf(TEXT("MoveCount: %d, TotalDistanceMoved: %f"),
@@ -54,7 +54,7 @@ void AMyActor::TiggerCustomEvent()
         return;
     }
 
-    // 50% È®·ü·Î ÀÌµ¿ & È¸Àü
+    // 50% È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ & È¸ï¿½ï¿½
     if (FMath::RandRange(0, 1) == 0) {
         FVector nextDirection = GetRandomLocation();
         FRotator nextRotation = GetRandomRotation();
@@ -63,13 +63,13 @@ void AMyActor::TiggerCustomEvent()
         Turn(nextRotation);
 
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
-            FString::Printf(TEXT("(%d) Moved to: %s, Rotation: %s"),
+            FString::Printf(TEXT("(%d)  Moved to: %s, Rotation: %s"),
                 MoveCount, *nextDirection.ToString(), *nextRotation.ToString()));
         UE_LOG(LogTemp, Log, TEXT("(%d) Moved to: %s, Rotation: %s"),
             MoveCount, *nextDirection.ToString(), *nextRotation.ToString());
     }
 
-    // 1ÃÊÁÖ±â ½ÇÇà
+    // 1ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½
     RandomMoveCount--;
 
     FTimerHandle TempHandle;
