@@ -17,11 +17,5 @@
     <ClCompile Include="cppPractice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Codekata\68936.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Codekata\12954.cpp">
-      <Filter>Source Files\Codekata</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
