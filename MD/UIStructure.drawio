@@ -1,0 +1,76 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="0QJ27C_LTYo_jt8RIFqW">
+    <mxGraphModel dx="870" dy="1066" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="UIManager" vertex="1">
+          <mxGeometry height="60" width="120" x="150" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="&lt;div&gt;&amp;lt;abstract&amp;gt;&lt;/div&gt;UIBase" vertex="1">
+          <mxGeometry height="60" width="120" x="70" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="&lt;div&gt;&amp;lt;abstract&amp;gt;&lt;/div&gt;&lt;div&gt;UIBasePresenter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="230" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="ULocalPlayerSubsystem" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-5" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-1" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="270" y="190" as="sourcePoint" />
+            <mxPoint x="430" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="UIOrchestratorSubsystem" vertex="1">
+          <mxGeometry height="60" width="160" x="490" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-7" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-6" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="270" y="190" as="sourcePoint" />
+            <mxPoint x="430" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="&lt;div&gt;UIEventBindingDataAsset&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="390" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="&lt;div&gt;UIPresentBindingDataAsset&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="130" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-11" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-2" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="290" as="sourcePoint" />
+            <mxPoint x="100" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-12" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-3" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="290" as="sourcePoint" />
+            <mxPoint x="100" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-13" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-9" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="290" as="sourcePoint" />
+            <mxPoint x="100" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-14" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-6" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="30" y="290" as="sourcePoint" />
+            <mxPoint x="80" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" value="EventSubsystem" vertex="1">
+          <mxGeometry height="60" width="160" x="580" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="f4wgkAYHIYXtcP-_BYu0-18" edge="1" parent="1" source="f4wgkAYHIYXtcP-_BYu0-6" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=none;fontColor=default;" target="f4wgkAYHIYXtcP-_BYu0-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="490" y="190" as="sourcePoint" />
+            <mxPoint x="540" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

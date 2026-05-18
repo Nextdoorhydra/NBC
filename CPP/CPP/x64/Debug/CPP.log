@@ -1,2 +1,3 @@
-﻿  cppPractice.cpp
+﻿  12934.cpp
+C:\NDH\NBC\Codekata\12934.cpp(16,30): warning C4244: 'return': conversion from 'double' to '__int64', possible loss of data
   CPP.vcxproj -> C:\NDH\NBC\CPP\x64\Debug\CPP.exe
