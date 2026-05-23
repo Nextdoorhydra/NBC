@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="154540.cpp" />
+    <ClCompile Include="..\Codekata\12978.cpp" />
     <ClCompile Include="cppPractice.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
