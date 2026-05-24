@@ -5,8 +5,8 @@ using namespace std;
 
 string solution(vector<string> seoul)
 {
-    string prefix = "±è¼­¹æÀº ";
-    string suffix = "¿¡ ÀÖ´Ù";
+    string prefix = "ê¹€ì„œë°©ì€ ";
+    string suffix = "ì— ìˆë‹¤";
 
     int i = 0;
 
