@@ -20,9 +20,6 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files\Codekata</Filter>
     </ClCompile>
-    <ClCompile Include="..\Codekata\12978.cpp">
-      <Filter>Source Files\Codekata</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stb_image.h">
