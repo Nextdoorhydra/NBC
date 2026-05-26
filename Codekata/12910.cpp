@@ -17,7 +17,7 @@ vector<int> solution(vector<int> arr, int divisor)
     if (answer.empty())
         return { -1 };
 
-    sort(answer.begin(), answer.end(), less<int>());
+    std::sort(answer.begin(), answer.end(), less<int>());
 
     return answer;
 }

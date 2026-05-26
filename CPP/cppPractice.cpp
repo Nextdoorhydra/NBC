@@ -1,24 +1,28 @@
 ﻿#include <iostream>
 
-using namespace std;
-
-class Base {
-public:
-    virtual void func1();
-    virtual void func2();
-    void nonVirtualFunc();
-};
-
-class Derived : public Base {
-public:    
-    virtual void func2() override;
-    void nonVirtualFunc();
-};
+bool isLittleEndian()
+{
+    int num = 1;
+    // 첫 번째 바이트의 주소를 char형으로 변환하여 값 확인
+    if (*(char*)&num == 1)
+    {
+        return true; // 리틀 엔디안
+    }
+    else
+    {
+        return false; // 빅 엔디안
+    }
+}
 
 int main()
 {
-    Base myBase;
-    Derived myDerived;
-
+    if (isLittleEndian())
+    {
+        std::cout << "현재 시스템: Little Endian" << std::endl;
+    }
+    else
+    {
+        std::cout << "현재 시스템: Big Endian" << std::endl;
+    }
     return 0;
 }
