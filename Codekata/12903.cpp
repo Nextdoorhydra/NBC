@@ -3,16 +3,18 @@
 
 using namespace std;
 
-string solution(int n)
+string solution(string s)
 {
-    string answer = "";
-    int cnt = 0;
+    // 0 -> 1 / 2 = 0
+    // 0 1 -> 2 / 2 = 1
+    // 0 1 2 -> 3 / 2 = 1
+    // 0 1 2 3 4 -> 5 / 2 = 2
+    bool isEven = s.size() % 2 == 0;
+    int len = s.size() / 2 - (isEven ? 1 : 0);
+    return s.substr(len, isEven ? 2 : 1);
+}
 
-    while (n-- > 0)
-    {
-        auto s = (n % 2 == 0) ? "수" : "박";
-        answer += s;
-    }
-
-    return answer;
+int main()
+{
+    solution("abcde");
 }
