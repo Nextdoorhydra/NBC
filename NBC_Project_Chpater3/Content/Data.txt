@@ -1,0 +1,5 @@
+, ItemName, ItemClass, SpawnChance
+SmallCoinItem, SmallCoinItem, ,30
+BIgCoinItem, BigCoinItem, ,10
+MineItem, MineItem, ,40
+HealingItem, HealingItem, ,20
