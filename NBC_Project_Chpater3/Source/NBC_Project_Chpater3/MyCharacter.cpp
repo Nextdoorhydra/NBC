@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "NBC_Project_Chpater3Character.h"
+#include "MyCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -16,7 +16,7 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 //////////////////////////////////////////////////////////////////////////
 // ANBC_Project_Chpater3Character
 
-ANBC_Project_Chpater3Character::ANBC_Project_Chpater3Character()
+AMyCharacter::AMyCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -57,7 +57,7 @@ ANBC_Project_Chpater3Character::ANBC_Project_Chpater3Character()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void ANBC_Project_Chpater3Character::NotifyControllerChanged()
+void AMyCharacter::NotifyControllerChanged()
 {
 	Super::NotifyControllerChanged();
 
@@ -71,7 +71,7 @@ void ANBC_Project_Chpater3Character::NotifyControllerChanged()
 	}
 }
 
-void ANBC_Project_Chpater3Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
@@ -81,10 +81,10 @@ void ANBC_Project_Chpater3Character::SetupPlayerInputComponent(UInputComponent* 
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ANBC_Project_Chpater3Character::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AMyCharacter::Move);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ANBC_Project_Chpater3Character::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMyCharacter::Look);
 	}
 	else
 	{
@@ -92,7 +92,7 @@ void ANBC_Project_Chpater3Character::SetupPlayerInputComponent(UInputComponent* 
 	}
 }
 
-void ANBC_Project_Chpater3Character::Move(const FInputActionValue& Value)
+void AMyCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -115,7 +115,7 @@ void ANBC_Project_Chpater3Character::Move(const FInputActionValue& Value)
 	}
 }
 
-void ANBC_Project_Chpater3Character::Look(const FInputActionValue& Value)
+void AMyCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();

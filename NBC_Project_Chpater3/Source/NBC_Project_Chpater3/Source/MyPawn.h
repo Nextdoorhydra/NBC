@@ -1,8 +1,10 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
+#include "AbilitySystemInterface.h"
 #include "GameFramework/Pawn.h"
 #include "InputActionValue.h"
+#include "GAS/MyAttributeSet.h"
 #include "MyPawn.generated.h"
 
 class UCapsuleComponent;
@@ -13,7 +15,7 @@ class UInputMappingContext;
 class UInputAction;
 
 UCLASS()
-class AMyPawn : public APawn
+class AMyPawn : public APawn, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -35,12 +37,26 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Flight")
 	float BoosterRegenRate = 30.f;
-
-
+	
+	UFUNCTION(BlueprintCallable)
+	void SetMoveSpeed(float newSpeed);
+	
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
+	virtual void PossessedBy(AController* NewController) override;
+	
 protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	virtual void Tick(float DeltaTime) override;
 
+	// GAS
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS")
+	UAbilitySystemComponent* ASC;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS")
+	UMyAttributeSet* AttributeSet;	
+	
 private:
 	// 컴포넌트
 	UPROPERTY(VisibleAnywhere, Category = "Components")

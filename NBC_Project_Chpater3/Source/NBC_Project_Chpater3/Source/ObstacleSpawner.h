@@ -11,19 +11,16 @@ class NBC_PROJECT_CHPATER3_API AObstacleSpawner : public AActor
 
 public:
 	AObstacleSpawner();
+	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable, Category = "Spawning")
+	void SpawnObstacles(int32 Count);
 
 protected:
 	virtual void BeginPlay() override;
 
-public:
-	virtual void Tick(float DeltaTime) override;
-
-protected:
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<class AObstacleBase> ObstacleClass;
-
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	int32 SpawnCount = 10;
 
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	FVector SpawnAreaRange = FVector(1500.f, 1500.f, 0.f);

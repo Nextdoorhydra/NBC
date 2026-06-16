@@ -14,7 +14,11 @@ class NBC_PROJECT_CHPATER3_API ASpawnVolume : public AActor
 
 public:
 	ASpawnVolume();
-		
+	
+	UFUNCTION(BlueprintCallable, Category = "Spawning")
+	void SpawnRandomItem();
+	
+protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawing")
 	USceneComponent* Scene;
 	
@@ -22,12 +26,12 @@ public:
 	UBoxComponent* SpawningBox;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning")
-	UDataTable* ObjectDataTable;
+	UDataTable* ItemDataTable;
 	
 	UFUNCTION(BlueprintCallable, Category = "Spawning")
 	FVector GetRandomPointInVolume() const;
-	FItemSpawnRow* GetRandomItem() const;
 	
+	FItemSpawnRow* GetRandomItem() const;	
 	
 	UFUNCTION(BlueprintCallable, Category = "Spawning")
 	void SpawnItem(TSubclassOf<AActor> ActorClass);
