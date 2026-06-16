@@ -19,8 +19,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+	
 	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TSubclassOf<class AObstacleBase> ObstacleClass;
+	TArray<TSubclassOf<class AObstacleBase>> ObstacleClasses;
 
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	int32 SpawnCount = 10;

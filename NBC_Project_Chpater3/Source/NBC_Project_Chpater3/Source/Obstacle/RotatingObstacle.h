@@ -14,6 +14,8 @@ public:
 
 public:
 	virtual void Tick(float DeltaTime) override;
+	
+	virtual void BeginPlay() override;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Obstacle|Settings")

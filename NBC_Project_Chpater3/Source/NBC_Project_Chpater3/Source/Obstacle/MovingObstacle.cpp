@@ -3,8 +3,7 @@
 AMovingObstacle::AMovingObstacle()
 {
 	PrimaryActorTick.bCanEverTick = true;
-
-	MoveSpeed = FVector(200.f, 0.f, 0.f);
+		
 	MaxRange = 500.f;
 }
 
@@ -12,6 +11,17 @@ void AMovingObstacle::BeginPlay()
 {
 	Super::BeginPlay();
     
+	auto amount = FMath::RandRange(-200.f, 200.f);
+	MoveSpeed = FVector(amount, amount, 0.f);
+	
+	auto len = MoveSpeed.Length();
+	auto determinant = 1000.f;
+	
+	if (len < determinant)
+	{
+		MoveSpeed *= determinant / len;
+	}
+		
 	StartLocation = GetActorLocation();
 }
 
