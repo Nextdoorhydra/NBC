@@ -25,6 +25,9 @@ AMyPawn::AMyPawn()
 
     CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
     CameraComp->SetupAttachment(SpringArmComp);
+    
+    ASC = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("ASC"));
+    AttributeSet = CreateDefaultSubobject<UMyAttributeSet>(TEXT("AttributeSet"));
 }
 
 void AMyPawn::Tick(float DeltaTime)
@@ -135,4 +138,34 @@ void AMyPawn::Look(const FInputActionValue& Value)
 
     FRotator PitchRot(LookInput.Y * RotationSpeed * DeltaTime, 0.f, 0.f);
     SpringArmComp->AddLocalRotation(PitchRot);
+}
+
+void AMyPawn::SetMoveSpeed(float newSpeed)
+{
+    float changeSpeed = FMath::Clamp(newSpeed, 0.f, 500.f);
+    MoveSpeed = changeSpeed;
+}
+
+UAbilitySystemComponent* AMyPawn::GetAbilitySystemComponent() const
+{
+    return ASC;
+}
+
+void AMyPawn::BeginPlay()
+{
+    Super::BeginPlay();  
+        
+    if (ASC && AttributeSet)
+    {
+        AttributeSet->InitMoveSpeed(MoveSpeed); 
+    }
+}
+
+void AMyPawn::PossessedBy(AController* NewController)
+{
+    Super::PossessedBy(NewController);
+    if (ASC)
+    {
+        ASC->InitAbilityActorInfo(this, this);
+    }
 }

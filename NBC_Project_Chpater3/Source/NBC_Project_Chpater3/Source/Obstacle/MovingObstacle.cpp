@@ -29,15 +29,19 @@ void AMovingObstacle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector WorldVelocity = GetActorRotation().RotateVector(MoveSpeed);
+
 	FVector CurrentLocation = GetActorLocation();
-	CurrentLocation += MoveSpeed * DeltaTime;
+
+	CurrentLocation += WorldVelocity * DeltaTime;
 	SetActorLocation(CurrentLocation);
 
 	float DistanceMoved = FVector::Distance(StartLocation, CurrentLocation);
 	if (DistanceMoved >= MaxRange)
 	{
-		FVector MoveDirection = MoveSpeed.GetSafeNormal();
+		FVector MoveDirection = WorldVelocity.GetSafeNormal();
 		StartLocation = StartLocation + (MoveDirection * MaxRange);
+       
 		MoveSpeed = -MoveSpeed; 
 	}
 }

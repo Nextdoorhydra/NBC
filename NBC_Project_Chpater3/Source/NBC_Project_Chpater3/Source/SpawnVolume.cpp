@@ -15,6 +15,17 @@ ASpawnVolume::ASpawnVolume()
 	SpawningBox->SetupAttachment(Scene);
 }
 
+void ASpawnVolume::SpawnRandomItem()
+{
+	if (FItemSpawnRow* SelectedRow = GetRandomItem())
+	{
+		if (UClass* ActualClass = SelectedRow->ItemClass.Get())
+		{
+			SpawnItem(ActualClass);
+		}
+	}
+}
+
 FVector ASpawnVolume::GetRandomPointInVolume() const
 {
 	FVector BoxExtent = SpawningBox->GetScaledBoxExtent();
@@ -29,11 +40,11 @@ FVector ASpawnVolume::GetRandomPointInVolume() const
 
 FItemSpawnRow* ASpawnVolume::GetRandomItem() const
 {
-	if (!ObjectDataTable) return nullptr;
+	if (!ItemDataTable) return nullptr;
 
 	TArray<FItemSpawnRow*> AllRows;
-	static const FString ContextString(TEXT("ObjectSpawnContext"));
-	ObjectDataTable->GetAllRows(ContextString, AllRows);
+	static const FString ContextString(TEXT("ItemSpawnContext"));
+	ItemDataTable->GetAllRows(ContextString, AllRows);
 
 	if (AllRows.IsEmpty()) return nullptr;
 
