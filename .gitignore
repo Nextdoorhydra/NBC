@@ -4,6 +4,13 @@ Saved/
 Intermediate/
 DerivedDataCache/
 NBC_Project_Chpater3/Content/Fantastic_Dungeon_Pack
+NBC_Project_Chpater3/Binaries/
+NBC_Project_Chpater3/Intermediate/
+NBC_Project_Chpater3/Saved/
+NBC_Project_Chpater3/DerivedDataCache/
+NBC_Project_Chpater3/.vs/
+NBC_Project_Chpater3/*.sln
+NBC_Project_Chpater3/*.suo
 
 # Visual Studio 2015 user specific files
 .vs/
