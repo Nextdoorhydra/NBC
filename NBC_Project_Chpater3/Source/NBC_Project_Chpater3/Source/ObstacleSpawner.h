@@ -18,10 +18,18 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	UFUNCTION(BlueprintCallable, Category = "Spawning")
+	void SpawnItems(int32 Count);
+	
 	UFUNCTION(BlueprintCallable, Category = "Spawning")
 	void SpawnObstacles(int32 Count);
 
 protected:
+protected:
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	UDataTable* ItemDataTable;
+	
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TArray<TSubclassOf<class AObstacleBase>> ObstacleClasses;
 

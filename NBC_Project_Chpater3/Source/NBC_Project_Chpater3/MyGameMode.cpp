@@ -52,6 +52,7 @@ void AMyGameMode::StartWave(int32 WaveIndex)
     if (CachedObstacleSpawner)
     {
        CachedObstacleSpawner->SpawnObstacles(TargetSpawnCount);
+       CachedObstacleSpawner->SpawnItems(5);
     }
 
     // GetWorldTimerManager().SetTimer(WaveTimerHandle, this, &AMyGameMode::OnWaveTimeUp, 30.0f, false);
